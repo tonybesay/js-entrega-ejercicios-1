@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>Calculadora Sencilla</title>
+</head>
+<body>
+
+    <header class="container">
+        <h2>Tony Mendoza Hernández</h2>
+        <small>Master Full Stack · JavaScript</small>
+        <a href="../../index.html">Inicio</a>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Calculadora</h1>
+            
+            <form action="" id="calculadora">
+                <div class="flex_between">
+                    <input type="number" id="numero1" placeholder="Primer número" tabindex="1">
+                    <input type="number" id="numero2" placeholder="Segundo número" tabindex="2">
+                </div>
+                <div class="flex_between" >
+                    <button type="button" id="sumarBtn" tabindex="3">+</button>
+                    <button type="button" id="restarBtn" tabindex="4">-</button>
+                    <button type="button" id="multiplicarBtn" tabindex="5">*</button>
+                    <button type="button" id="dividirBtn" tabindex="6">/</button>
+                </div>
+            </form>
+            <div class="flex_center" id="divResultado">
+                <p>Resultado:</p>
+                <p id="pResultado"></p>
+            </div>
+        </div>
+        
+    </main>
+    <script type="module" src="../js/js_ejercicio_5.js"></script>
+</body>
+</html>

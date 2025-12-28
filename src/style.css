@@ -1,0 +1,292 @@
+/* ==============================
+   RESET BÁSICO
+============================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ==============================
+   VARIABLES GLOBALES
+============================== */
+:root {
+  --bg-color: #f4f6f8;
+  --card-bg: #ffffff;
+  --primary-color: #2563eb;
+  --secondary-color: #1e293b;
+  --text-color: #334155;
+  --border-color: #e2e8f0;
+
+  --radius: 8px;
+  --shadow: 0 10px 25px #00000014;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+header small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+header a{
+  margin-top: 10px;
+}
+
+/* ==============================
+   ESTILOS GENERALES
+============================== */
+body {
+  font-family: monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--card-bg);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==============================
+   TÍTULOS
+============================== */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--secondary-color);
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--secondary-color);
+}
+
+/* ==============================
+   BOTONES
+============================== */
+button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.delete_button {  
+  background-color: rgb(187, 6, 6);
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.delete_button:hover {
+  background-color: rgba(187, 6, 6, 0.7);
+}
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ==============================
+   INPUTS
+============================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formLocalStorage {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* ==============================
+   LISTAS
+============================== */
+ul {
+  width: 100%;
+  list-style: none;
+  margin-top: 16px;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ==============================
+   ENLACES
+============================== */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ==============================
+   UTILIDADES
+============================== */
+.flex_between {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.flex_center {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.flex_columns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  word-wrap: break-word;
+  overflow: auto;
+}
+.flex_rows {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.error {
+  color: red;
+}
+
+#temporizador_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#temporizador {
+  font-size: 4rem;
+}
+
+/* ==============================
+   EJERCICIO 9 - LISTA DE TAREAS
+============================== */
+
+#taskList {
+  width: 100%;
+}
+
+/* Cada tarea */
+#taskList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* izquierda ↔ derecha */
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 1rem;
+}
+
+/* Contenedor izquierda: checkbox + texto */
+#taskList li > input[type="checkbox"],
+#taskList li > span {
+  margin: 0;
+}
+
+/* Agrupamos checkbox + texto visualmente */
+#taskList li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+/* Checkbox */
+#taskList input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Texto de la tarea */
+#taskList span {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* Botón eliminar */
+#taskList .delete_button {
+  margin-left: auto;
+}
+
+/* Estado completado */
+.task-done span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
